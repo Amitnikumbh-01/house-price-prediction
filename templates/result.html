@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h1>🎉 Prediction Completed</h1>
+
+        <h3>Estimated House Price</h3>
+
+        <h2>{{ prediction }}</h2>
+
+        <hr>
+
+        <div class="model-info">
+
+            <div class="info-box">
+                <h4>Model</h4>
+                <p>{{ model_name }}</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Accuracy</h4>
+                <p>{{ accuracy }}</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Features</h4>
+                <p>{{ features }}</p>
+            </div>
+
+        </div>
+
+        <a href="{{ url_for('home') }}">
+            <button type="button">
+                🏠 Predict Another House
+            </button>
+        </a>
+
+    </div>
+
+    <footer>
+        Developed by <strong>Amit Singh</strong> |
+        Python • Flask • Scikit-Learn
+    </footer>
+
+</div>
+
+<!-- Redirect to Home if user refreshes this page -->
+<script>
+
+    // Detect page reload
+    if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
+        window.location.href = "{{ url_for('home') }}";
+    }
+
+</script>
+
+</body>
+
+</html>

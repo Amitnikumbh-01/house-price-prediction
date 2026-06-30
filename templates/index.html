@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI House Price Predictor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>🏡 AI House Price Predictor</h1>
+
+<p>
+Predict house prices using Machine Learning
+</p>
+
+</div>
+
+<form action="/predict" method="POST">
+
+<div class="form-grid">
+
+<div class="input-group">
+
+<label>📐 Area (sq.ft.)</label>
+
+<input type="number" name="area" required>
+
+</div>
+
+<div class="input-group">
+
+<label>🛏 Bedrooms</label>
+
+<input type="number" name="bedrooms" required>
+
+</div>
+
+<div class="input-group">
+
+<label>🚿 Bathrooms</label>
+
+<input type="number" name="bathrooms" required>
+
+</div>
+
+<div class="input-group">
+
+<label>🏢 Stories</label>
+
+<input type="number" name="stories" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Main Road</label>
+
+<select name="mainroad">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Guest Room</label>
+
+<select name="guestroom">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Basement</label>
+
+<select name="basement">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Hot Water Heating</label>
+
+<select name="hotwaterheating">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Air Conditioning</label>
+
+<select name="airconditioning">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>🚗 Parking</label>
+
+<input type="number" name="parking" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Preferred Area</label>
+
+<select name="prefarea">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Furnishing Status</label>
+
+<select name="furnishingstatus">
+
+<option value="furnished">Furnished</option>
+
+<option value="semi-furnished">Semi-Furnished</option>
+
+<option value="unfurnished">Unfurnished</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button type="submit">
+
+✨ Predict House Price
+
+</button>
+
+</form>
+
+<footer>
+
+Developed by <b>Amit Singh</b>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
